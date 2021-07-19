@@ -23,33 +23,33 @@ body {
 }
 
 h1 {
+  font-size: 2.5rem;
   color: hsl(300, 43%, 22%);
-  letter-spacing: 0.01rem;
-  line-height: 1.8rem;
+  line-height: 2.5rem;
   margin: 20px;
 }
 
-.main-para {
+p {
   color: hsl(303, 10%, 53%);
   margin: 15px;
 }
 
-.stars {
+div.stars {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  background-size: 20px;
+  justify-content: space-between;
+  width: 100px;
   margin: 10px;
 }
 
 .ratings {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-content: center;
   align-items: center;
   padding: 10px;
-  margin: 20px;
+  margin: 10px;
   font-weight: 700;
   color: hsl(300, 43%, 22%);
   background-color: hsl(300, 24%, 96%);
@@ -59,16 +59,24 @@ h1 {
 .cards {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 10px;
+  justify-content: center;
   border-radius: 10px;
   background-color: hsl(300, 43%, 22%);
   color: hsl(300, 24%, 96%);
-  margin-bottom: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+img.profile-pics {
+  max-width: 50px;
+  border-radius: 50%;
+  position: relative;
+  top: 60px;
 }
 
 .names {
   font-weight: bolder;
+  margin: 10px;
 }
 
 .verified-buyer {
@@ -77,4 +85,101 @@ h1 {
 
 .reviews {
   padding: 15px;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    min-height: 100vh;
+  }
+
+  .page-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .top-left,
+  .top-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .first-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+
+  .second-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .third-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+}
+
+.page-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+}
+
+.colt-card {
+  align-self: flex-start;
+}
+
+.irene-card {
+  align-self: center;
+}
+
+.anne-card {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 720px) {
+  .page-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 33vh;
+  }
+
+  .ratings {
+    display: flex;
+    flex-direction: row;
+    width: 25rem;
+  }
+
+  div.stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+    margin: 10px;
+  }
+
+  .cards {
+    width: 26vw;
+    height: 25vh;
+  }
 }

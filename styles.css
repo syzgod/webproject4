@@ -20,7 +20,16 @@ body {
   quotes: none;
   padding: 10px;
   margin: 20px;
-  max-width: 80%;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -69,10 +78,14 @@ div.stars {
 }
 
 img.profile-pics {
-  max-width: 50px;
+  max-width: 60px;
   border-radius: 50%;
-  position: relative;
-  top: 60px;
+  float: left;
+}
+
+.buyer {
+  display: inline;
+  flex-direction: column;
 }
 
 .names {
@@ -102,7 +115,6 @@ img.profile-pics {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 25vh;
   }
 
   .top-left,
@@ -180,6 +192,12 @@ img.profile-pics {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 26vh;
+    min-height: 25vh;
+  }
+
+  @media screen and (min-width: 1020px) {
+    .main-container {
+      max-width: 1000px;
+    }
   }
 }

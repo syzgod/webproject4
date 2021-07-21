@@ -78,13 +78,19 @@ div.stars {
 }
 
 img.profile-pics {
-  max-width: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  float: left;
+  margin-top: 7px;
+}
+
+.customer {
+  display: flex;
+  margin: 20px 0 20px 20px;
 }
 
 .buyer {
-  display: inline;
+  display: flex;
   flex-direction: column;
 }
 
@@ -192,7 +198,7 @@ img.profile-pics {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 25vh;
+    min-height: 30vh;
   }
 
   @media screen and (min-width: 1020px) {
